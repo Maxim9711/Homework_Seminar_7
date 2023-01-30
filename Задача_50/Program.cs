@@ -1,4 +1,3 @@
-// See https://aka.ms/new-console-template for more information
 void showArray (int [,] array){
     for(int i=0; i < array.GetLength(0); i++){
       for(int j=0; j < array.GetLength(1); j++)
@@ -23,7 +22,7 @@ Console.Write("Столбец: ");
 int n = Convert.ToInt32(Console.ReadLine());
 
 
-if(m >= 0 & m <= array.GetLength(0) & n >= 0 & n <= array.GetLength(1))
-  Console.Write($"Элемент массива: {array[m-1, n-1]}");
+if(m >= 0 & m < array.GetLength(0) & n >= 0 & n < array.GetLength(1))
+  Console.Write($"Элемент массива: {array[m, n]}");
 else
   Console.Write($"Нет элемента на данной позиции");
